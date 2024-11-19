@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind project</title>
+    <title>Tailwind final project</title>
     <!-- css file link here -->
     <link rel="stylesheet" href="css/main.css">
 
-    <!-- fontaweson link -->
+    <!-- font awesome link -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
         </style>
@@ -21,202 +21,233 @@
 
     <!-- navbar code here -->
 
-    <header class=" relative">
-        <div class="ps-40 w-full md:w-full flex justify-between fixed bg-white pr-40 top-0">
-            <a class="flex items-center font-bold text-3xl" href="index.html"><img class="w-32 h-16 " src="/images/logo.png" alt="">BANARTIS PAARMEEZ LABORATORIES</a>
-            
-            <nav class="">
-                <button id="mobile_icon" class="text-end flex sm:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                  </svg>
-                  </svg>
-                  </button>
-
-                <ul id="main_menu" class="absolute w-full left-0 top-20 p-4 text-center hidden sm:block sm:relative sm:top-0 sm:flex justify-center items-center">
-
-                    <li class="text-black text-sm md:text-base text-center py-6 no-underline hover:underline hover:text-red-600 underline-offset-8 decoration-2" href="#">Home</a>
-                    </li>
-                    
-                        <div class=" flex items-center justify-center">
-                            <div class="group relative cursor-pointer">
-                        
-                                <div class="  bg-white px-4">
-                                    <a class="text-blacktext-sm md:text-base text-center py-6 no-underline hover:underline hover:text-red-600 underline-offset-8 decoration-2" onClick="">
-                                     More<i class="fa-solid fa-angle-down"></i></a>
-                                </div>
-                        
-                                <div style=" margin-left: -170px; border: 1px solid black; margin-top: 5px;" class="invisible absolute z-50 flex-col bg-gray-100 py-1 px-40 ps-5 text-black  group-hover:visible border-2 hover:text-red-600">
-                        
-                                <a class="my-2 block border-b border-gray-100 text-sm md:text-base ">About</a>
-                        
-                                <a class="my-2 block border-b border-gray-100 text-sm md:text-base ml-4">Services</a>
-                              </div>
-                            </div>
-                        </div>
-                   
-                    <button class=" justify-center items-center outline ml-5 px-6 py-2 tracking-wide text-xl hover:outline-none hover:text-white hover:bg-red-600">CONTACT</button>
-
-                </ul>
-            </nav>
+    <nav class="relative bg-white shadow">
+      <div class="max-w-5xl mx-auto px-4">
+        <div class="flex justify-between items-center py-5">
+          <!-- Logo -->
+          <a class="flex items-center font-bold text-[26px] tracking-wide" href="index.html">
+            <img class="w-28 h-14" src="/images/logo.png" alt="Logo">
+            BANARTIS PAARMEEZ LABORATORIES
+          </a>
+    
+          <!-- Mobile Menu Button -->
+          <button id="menu-btn" class="md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+    
+          <!-- Desktop Menu -->
+          <ul id="menu" class="hidden md:flex items-center space-x-6">
+            <li><a href="#" class="text-gray-800 hover:underline hover:text-red-600 decoration-2">Home</a></li>
+            <li class="relative group">
+              <a href="#" class="text-gray-800 hover:underline hover:text-red-600 decoration-2">More<i class="fa-solid fa-angle-down"></i></a>
+              <div style="margin-left: -205px; border: 1px solid black;" class="hidden absolute z-50 bg-gray-100 py-6 pe-40 border border-gray-200 group-hover:block">
+                <a href="#" class="block py-1 hover:text-red-600 p-4">About</a>
+                <a href="#" class="block py-1 hover:text-red-600 p-4">Services</a>
+              </div>
+            </li>
+            <li><a href="#" class="outline outline-2 px-8 py-3 tracking-widest font-semibold text-lg hover:outline-none hover:bg-red-600 hover:text-white">Contact</a></li>
+          </ul>
         </div>
-    </header>
-
-    <!-- hero section here-->
-     <section class="mt-1">
-        <div class="bg-cover bg-center space-y-5 bg-fixed" style="background-image:linear-gradient(rgba(0, 0, 0, 0.473), rgba(0, 0, 0, 0.514)), url(/images/heroimage.jpeg); width: 100%; height: 90vh;">
-
-            <h1 class="text-white text-6xl font-bold ml-48 pt-48">Testing excellence</h1>
-            <p class="text-white text-3xl ml-48">A Dependable and Methodical Allies of your Testing Affairs</p>
-        
-            <button style="font-family: Roboto;" class=" ml-48 mt-6 px-8 py-3 bg-red-600 text-white text-lg   hover:bg-red-800">VIEW SERVICES</button>
-           </div>
-     </section>
-
-     <section class="container mx-auto w-[75%] mt-40">
-        <div class="grid grid-cols-2 divide-x gap-20">
-            <div class="space-y-4">
-                <h4 class="uppercase text-red-600 font-semibold">Your testing partner</h4>
-                <h2 class="text-4xl font-bold">Reliable solutions for quality <br> assurance</h2>
-             <p class="text-xl text-gray-500">At Banartis Paarmeez Laboratories, located in York, we specialize in comprehensive testing services tailored to meet your needs. Our microbiology testing
-             follows the highest standards, ensuring the safety and efficacy of non-sterile drug products, nutraceuticals, cosmetics, and water. We excel in physico-chemical characterization, utilizing advanced techniques for drug substances and products. Our ICH stability studies and packaging material testing guarantee the integrity and quality of your formulations. Trust us to be your dependable ally in all your testing affairs.</p>
-
-            <p class=" text-xl text-gray-700 underline underline-offset-2 decoration-1 hover:no-underline">Get   in touch</p>
-            </div>
-
-            <div class=" w-[420px]"><img class="ml-11 bg-cover bg-center h-[600px] w-[450px]" src="/images/testingg (2).jpeg" alt="">
-            </div>
     
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden">
+          <ul class="space-y-4 mt-4">
+            <li><a href="#" class="block text-gray-800">Home</a></li>
+            <hr style=" border-bottom: 1px solid gray;">
+            <li><a href="#" class="block text-gray-800">About</a></li>
+            <hr style=" border-bottom: 1px solid gray;">
+            <li><a href="#" class="block text-gray-800">Services</a></li>
+            <li><a href="#" class="block text-gray-800 outline px-4 py-2 text-center font-bold mb-4">Contact</a></li>
+          </ul>
         </div>
-   </section>
-
-    <!-- testing area -->
-
-    <section class="container mx-auto w-[75%] mt-40">
-        <p class="text-xl text-red-600 font-semibold mb-4">Expert testing solutions</p>
-        <h2 class="text-3xl font-semibold mb-12">A Dependable and Methodical Allies of Your <br> Testing Affairs</h2>
-        <div class=" grid lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1 gap-6 mb-48 ">
-            <div class="h-[420px] shadow-2xl cursor-pointer transition ease-in-out delay-75  hover:translate-y-1 hover:scale-105 hover:duration-100">
-                <img src="/images/expart1.jpeg" alt="">
-                <h1 class="text-2xl font-bold text-gray-800 pl-5 my-4 hover:text-red-600">Microbiology testing<i class="fa-solid fa-angle-right"></i></h1>
-                <p class="text-xl text-gray-600 pl-5 mb-36">Comprehensive microbiology testing for various products.</p>
-            </div>
-        
-            <div class="h-[420px] shadow-2xl cursor-pointer transition ease-in-out delay-75  hover:translate-y-1 hover:scale-105 hover:duration-100">
-                <img src="/images/expart2.jpeg" alt="">
-                <h1 class="text-2xl font-bold text-gray-800 pl-5 my-4 hover:text-red-600">Physico-Chemical <br> characterization<i class="fa-solid fa-angle-right"></i></h1>
-                <p class="text-xl text-gray-600 pl-5 mb-60">Thorough physico-chemical <br> characterization of drug <br> substances.</p>
-            </div>
-        
-            <div class="h-[420px] shadow-2xl cursor-pointer transition ease-in-out delay-75  hover:translate-y-1 hover:scale-105 hover:duration-100">
-                <img src="/images/expart3.jpeg" alt="">
-                <h1 class="text-2xl font-bold text-gray-800 pl-5 my-4 hover:text-red-600 ">ICH stability studies</h1>
-                <p class="text-xl text-gray-600 pl-5 mb-6">Expert support for comprehensive stability study programs.</p>
-            </div>
-        
-           </div>
-        
-       </section>
-
-        <!-- contact form area  -->
-
-  <section class="container mx-auto w-[75%] mt-40 mb-40">
-    
-    <div class="grid grid-cols-2 divide-x gap-10">
-    
-    <form class="h-96">
-        <h4 class="uppercase text-red-600 font-semibold">Get in touch</h4>
-    <h2 class="text-4xl font-bold mb-2">We’re here to assist you!</h2>
-        <label class="form-control w-96 mx-auto ml-1 mb-3">
-            <div class="label">
-              <span class="label-text text-xl">Name<span class="text-red-600">*</span></span>
-            </div>
-            <input type="text" placeholder="Jane Smith" class="input input-bordered rounded-none w-96 text-xl" />
-        
-          </label>
-        
-          <label class="form-control w-96 mx-auto ml-1 mb-3">
-            <div class="label">
-              <span class="label-text text-xl">Email address<span class="text-red-600">*</span></span>
-            </div>
-            <input type="text" placeholder="gmil@website.com" class="input input-bordered rounded-none w-96 text-xl" />
-        
-          </label>
-        
-          <label class="form-control w-96 mx-auto ml-1 mb-3">
-            <div class="label">
-              <span class="label-text text-xl">Phone number <span class="text-red-600">*</span></span>
-            </div>
-            <input type="text" placeholder="555-555-55555" class="input input-bordered rounded-none w-96 text-xl" />
-        
-          </label>
-        
-          <label class="form-control ml-1 mb-3">
-            <div class="label">
-              <span class="label-text text-xl">Message</span>
-              
-            </div>
-            <textarea class="textarea textarea-bordered rounded-none h-32 text-xl w-96"></textarea>
-            
-          </label>
-          
-    <div class="flex items-start mb-3">
-      <div class="flex items-center h-5">
-        <input id="remember" type="checkbox" value="" class=" mt-10 w-5 h-5 border border-gray-300 bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
       </div>
-      <label for="remember" class="mt-4 ms-2 text-[18px] font-medium text-gray-600 dark:text-gray-300">I allow this website to store my submission so they <br> can respond to my inquiry. *
-    </label>
-    </div>
+    </nav>
     
-    <button style="font-family: Roboto;" class=" w-[450px] px-8 py-3 bg-red-600 text-white font-serif text-xl hover:bg-red-800 ">SUBMIT</button>
-  </form>
-    <!-- map area -->
-        <div class="w-[600px] ml-16">
-            <h3 class="text-2xl font-bold mb-1">Get in touch</h3>
-            <p><a href="#"><i class="fa-regular fa-envelope"></i> <span class="text-xl text-gray-500 underline hover:text-red-600 py-4">banartis@gmail.com</span></a></p>
-            <h3 class="font-extrabold text-xl mb-2"> Location</h3>
-            <h4><i class=" text-xl fa-duotone fa-solid fa-location-dot"></i></h4>
-             
-            <iframe class="mb-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6035.420600703193!2d-73.15744704065457!3d40.85628382373515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e839be9429d4b3%3A0x95baa4cb9a3d2f6a!2sBanartis%20Paarmeez%20Laboratories!5e0!3m2!1sbn!2sbd!4v1730198723091!5m2!1sbn!2sbd" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- hero section here-->
+     
+     <section class="mt-1">
+      <div class="bg-cover bg-center bg-fixed space-y-5" 
+           style="background-image:linear-gradient(rgba(0, 0, 0, 0.473), rgba(0, 0, 0, 0.514)), url(/images/heroimage.jpeg); height: 90vh;">
+    
+        <!-- Hero Text -->
+        <div class="flex flex-col items-start justify-center h-full px-4 lg:px-48 space-y-4">
+          <h1 class="text-white text-4xl lg:text-6xl font-bold">Testing Excellence</h1>
+          <p class="text-white text-lg lg:text-3xl">A Dependable and Methodical Allies of Your Testing Affairs</p>
+          
+          <!-- Button -->
+          <button class="px-6 py-3 bg-red-600 text-white text-sm lg:text-lg font-medium hover:bg-red-800">
+            VIEW SERVICES
+          </button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- testing area code -->
+     
+   <section class="container mx-auto w-full md:w-3/4 mt-20 md:mt-40 px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 divide-y md:divide-y-0 md:divide-x">
+        <!-- Left content -->
+        <div class="space-y-6 md:space-y-4">
+            <h4 class="uppercase text-red-600 font-semibold">Your testing partner</h4>
+            <h2 class="text-2xl md:text-4xl font-bold">
+                Reliable solutions for quality <br class="hidden md:block"> assurance
+            </h2>
+            <p class="text-lg md:text-xl text-gray-500">
+                At Banartis Paarmeez Laboratories, located in York, we specialize in comprehensive testing services tailored to meet your needs. Our microbiology testing follows the highest standards, ensuring the safety and efficacy of non-sterile drug products, nutraceuticals, cosmetics, and water. We excel in physico-chemical characterization, utilizing advanced techniques for drug substances and products. Our ICH stability studies and packaging material testing guarantee the integrity and quality of your formulations. Trust us to be your dependable ally in all your testing affairs.
+            </p>
+            <p class="text-lg md:text-xl text-gray-700 underline underline-offset-2 decoration-1 hover:no-underline">
+                Get in touch
+            </p>
+        </div>
 
-            <h3 class="text-xl font-bold mb-2">Hours</h3>
-            <div class="flex gap-10">
-              <div class="text-xl text-gray-600">
-                <p>Monday</p>
-                <p>Tuesday</p>
-                <p>Wednesday</p>
-                <p>Thursday</p>
-                <p>Friday</p>
-                <p>Saturday</p>
-                <p>Sunday</p>
-              </div>
-              <div class="text-xl text-gray-600">
-                <p>9:00am	–	10:00pm</p>
-                <p>9:00am	–	10:00pm</p>
-                <p>9:00am	–	10:00pm</p>
-                <p>9:00am	–	10:00pm</p>
-                <p>9:00am	–	10:00pm</p>
-                <p>9:00am	–	6:00pm</p>
-                <p>9:00am	–	12:00pm</p>
-              </div>
-            </div>
+        <!-- Right content -->
+        <div class="w-full flex justify-center md:w-[420px]">
+            <img
+                class="ml-0 md:ml-11 bg-cover bg-center h-[300px] md:h-[600px] w-[450px] md:w-[450px]"
+                src="/images/testingg (2).jpeg"
+                alt="Testing lab"
+            />
         </div>
     </div>
 </section>
-   
+
+    <!--Expert testing area -->
+
+     <section class="container mx-auto w-11/12 md:w-4/5 mt-40">
+      <p class="text-xl text-red-600 font-semibold mb-4">Expert testing solutions</p>
+      <h2 class="text-3xl font-semibold mb-12 text-center md:text-left">
+        A Dependable and Methodical Ally for Your <br class="hidden md:block"> Testing Affairs
+      </h2>
+      <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-20">
+        <!-- Card 1 -->
+        <div class="h-[420px] shadow-2xl cursor-pointer transition-transform ease-in-out hover:translate-y-1 hover:scale-105">
+          <img src="/images/expart1.jpeg" alt="Microbiology testing" class="w-full h-48 object-cover">
+          <h1 class="text-2xl font-bold text-gray-800 px-5 mt-4 hover:text-red-600">
+            Microbiology testing <i class="fa-solid fa-angle-right"></i>
+          </h1>
+          <p class="text-xl text-gray-600 px-5 mt-2">
+            Comprehensive microbiology testing for various products.
+          </p>
+        </div>
+        <!-- Card 2 -->
+        <div class="h-[420px] shadow-2xl cursor-pointer transition-transform ease-in-out hover:translate-y-1 hover:scale-105">
+          <img src="/images/expart2.jpeg" alt="Physico-Chemical characterization" class="w-full h-48 object-cover">
+          <h1 class="text-2xl font-bold text-gray-800 px-5 mt-4 hover:text-red-600">
+            Physico-Chemical <br> characterization <i class="fa-solid fa-angle-right"></i>
+          </h1>
+          <p class="text-xl text-gray-600 px-5 mt-2">
+            Thorough physico-chemical characterization of drug substances.
+          </p>
+        </div>
+        <!-- Card 3 -->
+        <div class="h-[420px] shadow-2xl cursor-pointer transition-transform ease-in-out hover:translate-y-1 hover:scale-105">
+          <img src="/images/expart3.jpeg" alt="ICH stability studies" class="w-full h-48 object-cover">
+          <h1 class="text-2xl font-bold text-gray-800 px-5 mt-4 hover:text-red-600">
+            ICH stability studies
+          </h1>
+          <p class="text-xl text-gray-600 px-5 mt-2">
+            Expert support for comprehensive stability study programs.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+
+        <!-- contact form area  -->
+
+    <section class="container mx-auto sm:w-full md:w-[75%] mt-10 md:mt-40 mb-28">
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 divide-x gap-10">
+        <!-- Form Section -->
+        <form class="h-auto">
+          <h4 class="uppercase text-red-600 font-semibold">Get in touch</h4>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">We’re here to assist you!</h2>
+    
+          <label class="form-control w-full md:w-96 mb-3">
+            <span class="label-text text-base md:text-xl mb-2">Name<span class="text-red-600">*</span></span>
+            <input type="text" placeholder="Jane Smith" class="input input-bordered rounded-none w-full text-base md:text-xl" />
+          </label>
+    
+          <label class="form-control w-full md:w-96 mb-3">
+            <span class="label-text text-base md:text-xl mb-2">Email address<span class="text-red-600">*</span></span>
+            <input type="text" placeholder="email@website.com" class="input input-bordered rounded-none w-full text-base md:text-xl" />
+          </label>
+    
+          <label class="form-control w-full md:w-96 mb-3">
+            <span class="label-text text-base md:text-xl mb-2">Phone number <span class="text-red-600">*</span></span>
+            <input type="text" placeholder="555-555-5555" class="input input-bordered rounded-none w-full text-base md:text-xl" />
+          </label>
+    
+          <label class="form-control mb-3">
+            <span class="label-text text-base md:text-xl mb-2">Message</span>
+            <textarea class="textarea textarea-bordered rounded-none h-32 w-full md:w-96 text-base md:text-xl"></textarea>
+          </label>
+    
+          <div class="flex items-start mb-8">
+            <input id="remember" type="checkbox" class="w-5 h-5 border border-gray-300 focus:ring-3 focus:ring-blue-300" required />
+            <label for="remember" class="text-sm md:text-base ml-2">
+              I allow this website to store my submission so they can respond to my inquiry. *
+            </label>
+          </div>
+    
+          <button class="w-full sm:w-[450px] px-8 py-3 bg-red-600 text-white font-serif text-base md:text-xl hover:bg-red-800">
+            SUBMIT
+          </button>
+        </form>
+    
+        <!-- Map and Contact Details Section -->
+        <div class="ml-0 md:ml-16">
+          <h3 class="text-2xl font-bold mb-2">Get in touch</h3>
+          <p>
+            <a href="#" class="text-base md:text-xl text-gray-500 underline hover:text-red-600">
+              <i class="fa-regular fa-envelope"></i> banartis@gmail.com
+            </a>
+          </p>
+    
+          <h3 class="font-extrabold text-lg md:text-xl mt-4 mb-2">Location</h3>
+          <i class=" text-xl fa-duotone fa-solid fa-location-dot"></i>
+          
+          <iframe class="mb-4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6035.420600703193!2d-73.15744704065457!3d40.85628382373515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e839be9429d4b3%3A0x95baa4cb9a3d2f6a!2sBanartis%20Paarmeez%20Laboratories!5e0!3m2!1sbn!2sbd!4v1730198723091!5m2!1sbn!2sbd" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+          <h3 class="text-lg md:text-xl font-bold">Hours</h3>
+          <div class="flex flex-wrap gap-4">
+            <div class="text-base md:text-xl text-gray-600">
+              <p>Monday</p>
+              <p>Tuesday</p>
+              <p>Wednesday</p>
+              <p>Thursday</p>
+              <p>Friday</p>
+              <p>Saturday</p>
+              <p>Sunday</p>
+            </div>
+            <div class="text-base md:text-xl text-gray-600">
+              <p>9:00am – 10:00pm</p>
+              <p>9:00am – 10:00pm</p>
+              <p>9:00am – 10:00pm</p>
+              <p>9:00am – 10:00pm</p>
+              <p>9:00am – 10:00pm</p>
+              <p>9:00am – 6:00pm</p>
+              <p>9:00am – 12:00pm</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
     <!-- footer area here -->
     <footer>
-        <div style="background-color: #291414;" class="w-full h-60 mb-10 text-white text-base font-semibold">
-            <ul class="flex space-x-8 px-40 py-24 cursor-pointer">
-                <li class="hover:border-b-2">Services</li>
-                <li class="hover:border-b-2">Schedule appointment</li>
-                <li class="hover:border-b-2">Complete intake</li>
-                <li class="hover:border-b-2">Contact</li>
-            </ul>
-        </div>
-    </footer>
+     <div class="bg-[#291414] w-full h-56 py-6 sm:py-24 text-white text-base font-semibold">
+    <ul class="flex flex-col sm:flex-row sm:space-x-8 px-5 sm:px-40 text-left space-y-2 sm:space-y-0">
+      <li class="hover:border-b-2 border-white cursor-pointer">Services</li>
+      <li class="hover:border-b-2 border-white cursor-pointer">Schedule appointment</li>
+      <li class="hover:border-b-2 border-white cursor-pointer">Complete intake</li>
+      <li class="hover:border-b-2 border-white cursor-pointer">Contact</li>
+    </ul>
+  </div>
+  </footer>
 
-
-
+  
    <script src="script.js" type="module"></script>
 </body>
 </html>

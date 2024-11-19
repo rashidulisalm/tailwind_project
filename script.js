@@ -1,6 +1,9 @@
-let mobile_icon = document.getElementById("mobile_icon");
-let main_menu = document.getElementById("main_menu");
 
-mobile_icon.addEventListener("click", () =>{
-    main_menu.classList.toggle('hidden');
-})
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+});
+
+    
